@@ -1,0 +1,233 @@
+/* == Input == */
+.wojo.input {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: .250rem;
+  border: 0px solid var(--grey-color-300);
+  background-color: #fff;
+  box-shadow: 0 0 0 1px var(--grey-color-300);
+  align-items: stretch;
+  transition: all 0.2s ease-in-out;
+}
+.wojo.input input,
+.wojo.form .wojo.input input,
+.wojo.form .wojo.input textarea {
+  flex: 1 1 0px;
+  min-width: 0;
+  border: 0;
+  line-height: normal;
+  vertical-align:middle;
+  border-radius: .250rem;
+  box-shadow: none;
+  height: calc(1.875rem + 1rem - 2px);
+}
+/* == Icon == */
+.wojo.icon.input > i.icon,
+.wojo.input .tag.label {
+  line-height: 1rem;
+  padding: 0 1rem;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+.wojo.action.input > .button,
+.wojo.icon.input > .button {
+  padding: 0 1.875rem;
+  flex: 0 1 auto;
+  -ms-grid-row-align: auto;
+  align-self: auto;
+  height: calc(100%-4px);
+}
+.wojo.action.input > .icon.button,
+.wojo.icon.input > .icon.button {
+  padding: 0 1rem;
+  border: 0;
+  margin:1px;
+}
+.wojo.action.input > .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--grey-color-100);
+}
+.wojo.action.input > .buttons .wojo.button {
+  padding: 0 1rem;
+}
+.wojo.input > select {
+  width: auto;
+  box-shadow: none;
+}
+/* == Basic == */
+.wojo.basic.input {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+  border-radius: 0;
+}
+.wojo.basic.input input,
+.wojo.form .wojo.basic.input input,
+.wojo.form .wojo.basic.input textarea {
+  background: rgba(255, 255, 255, 0);
+  padding: 1rem 0;
+}
+/* == Transparent == */
+.wojo.transparent.input {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 1px var(--light-color-shadow);
+}
+.wojo.transparent.input input {
+  color: rgba(255, 255, 255, 0.8);
+}
+.wojo.transparent.input input,
+.wojo.form .wojo.transparent.input input,
+.wojo.form .wojo.transparent.input textarea {
+  background: rgba(255, 255, 255, 0.05);
+}
+.wojo.input.transparent.focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 1rem 0 var(--shadow-color), 0 0 0 1px var(--light-color-shadow);
+}
+.wojo.transparent.input .icon {
+  color: rgba(255, 255, 255, .5);
+}
+/* == Placeholder == */
+.wojo.form .wojo.input.transparent ::-webkit-input-placeholder {
+  color: var(--grey-color-200);
+}
+.wojo.form .wojo.input.transparent :-ms-input-placeholder {
+  color: var(--grey-color-200);
+}
+.wojo.form .wojo.input.transparent ::-moz-placeholder {
+  color: var(--grey-color-200);
+}
+.wojo.form .wojo.input.transparent.focus :focus::-webkit-input-placeholder {
+  color: var(--grey-color-200);
+}
+.wojo.form .wojo.input.transparent.focus :focus:-ms-input-placeholder {
+  color: var(--grey-color-200);
+}
+.wojo.form .wojo.input.transparent.focus :focus::-moz-placeholder {
+  color: var(--grey-color-200);
+}
+.wojo.form .wojo.input.transparent.focus input:-webkit-autofill {
+  box-shadow: 0px 0px 0px 100px #fff inset;
+  border-color: #fff;
+}
+.wojo.inline.input {
+  display: inline-flex;
+}
+/* == Tags == */
+.wojo.input .tag.label {
+  background-color: var(--primary-color);
+  padding: 0.5rem .75rem;
+  line-height: .750rem;
+  font-weight: 500;
+  color: var(--primary-color-inverted);
+  white-space: nowrap;
+  border-radius:.250rem;
+  margin-right: .250rem;
+}
+.wojo.input .tag [data-role="remove"] {
+  margin-left: .5rem;
+  cursor: pointer;
+}
+.wojo.input .tag [data-role="remove"]::after {
+  content: "x";
+  font-weight: 700;
+}
+/* == Focus == */
+.wojo.input.focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 1rem 0 var(--shadow-color), 0 0 0 1px var(--grey-color-300);
+}
+.wojo.basic.input.focus {
+  box-shadow: 0 1px 0 0 var(--primary-color);
+}
+.wojo.basic.input.focus input:focus {
+  box-shadow: none;
+}
+.wojo.transparent.input input:focus  {
+  color: rgba(255, 255, 255, 0.8);
+}
+/* == Placeholder == */
+.wojo.input ::-webkit-input-placeholder {
+ color: var(--grey-color-500);
+}
+.wojo.input :-ms-input-placeholder {
+ color: var(--grey-color-500);
+}
+.wojo.input ::-moz-placeholder {
+ color: var(--grey-color-500);
+}
+.wojo.input :focus::-webkit-input-placeholder {
+ color: var(--grey-color-700);
+}
+.wojo.input :focus:-ms-input-placeholder {
+ color: var(--grey-color-700);
+}
+.wojo.input :focus::-moz-placeholder {
+ color: var(--grey-color-700);
+}
+.wojo.input input:-webkit-autofill {
+ box-shadow: 0px 0px 0px 100px #fff inset;
+ border-color: #fff;
+}
+.wojo.input input:-webkit-autofill:focus {
+ box-shadow: 0px 0px 0px 100px #fff inset;
+ border-color: #fff;
+}
+/* == Ajax Search == */
+.wojo.ajax.input {
+  z-index:2;
+}
+.wojo.ajax.input .results {
+  position:absolute;
+  top:100%;
+  left:0;
+  z-index:5;
+  background:#fff;
+  margin-top:1px;
+  width:100%;
+  border-radius: .250rem;
+  border: 1px solid var(--grey-color-300);
+  box-shadow: 0 10px 15px -3px var(--shadow-color),0 4px 6px -2px var(--shadow-color);
+}
+/* == Size == */
+.wojo.mini.basic.input input {
+  padding: .875rem 0;
+}
+.wojo.form .wojo.mini.input input,
+.wojo.mini.input input {
+  line-height: .750rem;
+  padding: .5rem 1rem;
+  font-size: .750rem;
+  height: calc(1rem + 1rem);
+}
+.wojo.small.basic.input input {
+  padding: .875rem 0;
+}
+.wojo.form .wojo.small.input input,
+.wojo.small.input input {
+  line-height: .875rem;
+  padding: .875rem 1.5rem;
+  font-size: .875rem;
+  height: calc(1.5rem + 1rem + 2px);
+}
+.wojo.form .wojo.input input,
+.wojo.input input {
+  line-height: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  height: calc(3rem + 2px);
+}
+.wojo.form .wojo.large.input input,
+.wojo.large.input input {
+  line-height: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  height: calc(1.75rem + 1rem + 2px);
+}
+.wojo.form .wojo.large.basic.input input,
+.wojo.large.basic.input input {
+  padding: 1rem 0;
+  font-weight: 300;
+}

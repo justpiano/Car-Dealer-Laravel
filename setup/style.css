@@ -1,0 +1,326 @@
+@font-face {
+   font-display: swap;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 300;
+   src: url('fonts/raleway-v28-latin-300.woff2') format('woff2'),
+   url('fonts/raleway-v28-latin-300.woff') format('woff');
+}
+@font-face {
+   font-display: swap;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 400;
+   src: url('fonts/raleway-v28-latin-regular.woff2') format('woff2'),
+   url('fonts/raleway-v28-latin-regular.woff')
+}
+@font-face {
+   font-display: swap;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 500;
+   src: url('fonts/raleway-v28-latin-500.woff2') format('woff2'),
+   url('fonts/raleway-v28-latin-500.woff') format('woff');
+}
+@font-face {
+   font-display: swap;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 600;
+   src: url('fonts/raleway-v28-latin-600.woff2') format('woff2'),
+   url('fonts/raleway-v28-latin-600.woff') format('woff');
+}
+@font-face {
+   font-display: swap;
+   font-family: 'Raleway';
+   font-style: normal;
+   font-weight: 800;
+   src: url('fonts/raleway-v28-latin-800.woff2') format('woff2'),
+   url('fonts/raleway-v28-latin-800.woff') format('woff');
+}
+html,
+body {
+   font-size: 16px;
+   height: 100%;
+}
+body {
+   font-family: "Raleway", Helvetica, Arial, sans-serif;
+   color: #FFF;
+   background-color: #263238;
+   font-weight: 300;
+   line-height: 1.5;
+   text-align: left;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+}
+a,
+a.dark,
+a.white,
+a.grey {
+   cursor: pointer;
+   color: #026AA2;
+   text-decoration: none;
+   transition: all .35s ease;
+   outline: none;
+}
+a:hover,
+a.hover,
+a:focus {
+   color: #065986;
+   transition: all .55s ease;
+   outline: none;
+   text-decoration: none
+}
+a.grey {
+   color: #9e9e9e;
+}
+a.grey:hover,
+a.grey.hover,
+a.grey:focus {
+   color: #026AA2;
+}
+#wrap {
+   max-width: 1440px;
+   margin-top: 100px;
+   margin-right: auto;
+   margin-left: auto;
+   background-color: #3F51B5;
+   box-shadow: 0 .375rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+   border-radius: .5rem
+}
+header {
+   background-color: #283593;
+   font-weight: 200;
+   align-items: center;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   border-radius: .5rem .5rem 0 0;
+}
+header div img {
+   height: 3rem;
+   display: inline-flex;
+}
+header div,
+header h4 {
+   flex: 1 1 0;
+   min-width: 0;
+   padding: 1.5rem
+}
+header h4 {
+   font-size: 1.75rem;
+   margin: 0;
+   font-weight: 300;
+}
+header div, header h4 {
+   flex: 0 0 auto;
+   width: auto;
+   max-width: none;
+   white-space: nowrap;
+}
+nav span {
+   display: block;
+   margin-bottom: 1rem;
+   opacity: .75
+}
+nav span.active {
+   font-weight: 600;
+   opacity: 1
+}
+.line {
+   height: 2px;
+   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0) 100%)
+}
+h3 {
+   font-size: 2rem;
+   font-weight: 300;
+   margin: 0;
+   padding: 0;
+   color: #C5CAE9;
+}
+p.info {
+   font-size: .875rem;
+   background-color: rgba(255, 255, 255, 0.10);
+   border-radius: .275rem;
+   padding: .875rem;
+}
+#content {
+   position: relative;
+}
+#inner {
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   flex-flow: row wrap;
+}
+aside,
+main,
+.middle {
+   flex: 1 1 0;
+   min-width: 0;
+   padding: 1.5em;
+   margin: 3em 0;
+}
+.middle {
+   width: 1px;
+   flex: 0 0 auto;
+   max-width: 100%;
+   padding: 0;
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+aside {
+   width: 120px;
+   flex: 0 0 auto;
+   max-width: 100%;
+}
+footer {
+   align-items: center;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   background-color: #3949AB;
+   padding: 1rem;
+   border-radius: 0 0 .5rem .5rem;
+}
+main {
+   width: 100%;
+}
+.button {
+   font-family: Raleway, Arial, Helvetica, sans-serif;
+   cursor: pointer;
+   display: inline-flex;
+   flex-flow: row nowrap;
+   align-items: center;
+   justify-content: center;
+   outline: none;
+   vertical-align: middle;
+   margin: 0;
+   padding: .5rem 1.5rem;
+   font-weight: 500;
+   text-transform: none;
+   text-shadow: none;
+   line-height: 1rem;
+   font-style: normal;
+   text-align: center;
+   text-decoration: none;
+   transition: all .35s ease;
+   border-radius: .375rem;
+   background-color: #283593;
+   border: 1px solid #283593;
+   color: #C5CAE9;
+   font-size: .875rem;
+}
+.button:hover {
+   background-color: #1A237E;
+   transition: all .55s ease;
+   outline: none
+}
+#buttons {
+   display: inline-block;
+   margin: 0;
+   padding: 0
+}
+table.data {
+   width: 100%;
+   margin: 0;
+   box-shadow: none;
+   border-radius: 0;
+   text-align: left;
+   border-collapse: separate;
+   border-spacing: 0;
+   color: #fff;
+}
+table.data thead th {
+   cursor: auto;
+   text-align: left;
+   color: #C5CAE9;
+   padding: 1rem .750rem;
+   vertical-align: inherit;
+   font-size: .750rem;
+   font-weight: 800;
+   text-transform: uppercase;
+   border-bottom: .250rem solid #5C6BC0;
+   border-left: none;
+}
+table.data td {
+   padding: .750rem .750rem;
+   text-align: inherit;
+   border-bottom: 1px dashed #5C6BC0;
+}
+table.data td .image {
+   width: 20px;
+}
+table.data.forms td:first-child {
+   font-weight: 400;
+}
+.divider {
+   margin: 0;
+   height: 2em;
+}
+#copyright {
+   margin: 0 auto;
+   text-align: center;
+   padding: 1em;
+   font-size: .875em;
+}
+.license {
+   height: 450px;
+   width: 45vmax;
+   border: 0;
+}
+form {
+   position: relative;
+   max-width: 100%;
+   padding: 0;
+}
+input,
+textarea,
+select,
+.inputbox-sml {
+   width: 100%;
+   vertical-align: top;
+   margin: 0;
+   outline: none;
+   -webkit-appearance: none;
+   line-height: 1em;
+   padding: 0.75em 0;
+   font-size: 1em;
+   background-color: rgba(255, 255, 255, 0.10);
+   border: 0 solid #fff;
+   color: #fff;
+   border-radius: 3px;
+   box-shadow: none;
+   transition: color 0.1s ease, border-color 0.1s ease;
+   text-indent: 16px;
+}
+input:focus,
+textarea:focus {
+   background-color: rgba(255, 255, 255, 0.30);
+}
+div.error {
+   color: #fff;
+   font-size: .813em;
+   border-radius: 3px;
+   background-color: #EC407A;
+   font-weight: 400;
+   padding: 10px
+}
+.err {
+   color: #fff;
+   display: none;
+   font-weight: 400;
+   font-size: .813em;
+}
+.steperror {
+   padding: 1rem;
+   text-align: center;
+}
+div.remove_install {
+   background-color: #EC407A;
+   color: #fff;
+   text-align: center;
+   font-weight: 600;
+   padding: .375rem 0
+}

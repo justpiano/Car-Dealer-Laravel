@@ -1,0 +1,510 @@
+/* == List == */
+ul.wojo.list,
+ol.wojo.list {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+ul.wojo.list li,
+ol.wojo.list li {
+  list-style-type: none;
+  list-style-position: outside;
+  padding: .125rem 0;
+}
+ul.wojo.list ul,
+ol.wojo.list ol,
+ul ul,
+ol ol {
+  margin: 0;
+  padding: 0 0 0 .750rem;
+}
+.wojo.list .item {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  margin-bottom: .250rem;
+}
+.wojo.list.middle.aligned .item {
+  align-items: center;
+}
+.wojo.list .item > .content,
+.wojo.list .item > .icon:not(.button) {
+  flex: 1 1 0px;
+  min-width: 0;
+}
+.wojo.list .item > .icon:not(.button) {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+  margin-right: 1rem;
+}
+.wojo.list .item > .content.auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+.wojo.list .item > .image {
+  margin-right: 1rem;
+}
+.wojo.list .item .icon:only-child,
+.wojo.list .item .image:only-child {
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+.wojo.list .item .header {
+  line-height: 1rem;
+  margin-bottom: .250rem;
+  font-weight: 600
+}
+.wojo.list .item .description {
+  margin-left: .5rem;
+  font-weight: 700
+}
+/* == horizontal == */
+.wojo.horizontal.list {
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+.wojo.horizontal.list > .item {
+  margin-left: 1rem;
+  align-items: center;
+  margin-bottom:0;
+}
+.wojo.horizontal.list:not(.celled):not(.bulleted) > .item:first-child {
+  margin-left: 0em;
+  padding-left: 0em;
+}
+/* == divided == */
+.wojo.divided.list:not(.horizontal) > .item {
+  border-top: 1px solid var(--grey-color-300);
+  margin-bottom: 0
+}
+.wojo.divided.list:not(.horizontal) > .item:first-child {
+  border-top: none;
+}
+.wojo.divided.horizontal.list > .item,
+.wojo.celled.horizontal.list > .item {
+  padding-left: 1rem;
+}
+.wojo.divided.horizontal.list > .item::before,
+.wojo.celled.horizontal.list > .item::before,
+.wojo.horizontal.celled.list > .item:last-child::after {
+  border-left: 1px solid var(--grey-color-300);
+  height: 50%;
+  left: 0;
+  top: 25%;
+  width: 1px;
+  position: absolute;
+  content: '';
+}
+.wojo.horizontal.divided.list > .item:first-child::before {
+  border: none;
+}
+/* == celled == */
+.wojo.celled.list:not(.horizontal) > .item {
+  border-top: 1px solid var(--grey-color-300);
+  padding: 0.5rem;
+  margin-bottom: 0
+}
+.wojo.celled.list:not(.horizontal) > .item:last-child {
+  border-bottom: 1px solid var(--grey-color-300);
+}
+.wojo.horizontal.celled.list > .item:last-child::after {
+  left: auto;
+  right: -1rem;
+}
+.wojo.celled.horizontal.list > .item:first-child {
+  margin-left: 0;
+}
+/* == relaxed == */
+.wojo.relaxed.list:not(.horizontal):not(.divided) > .item:last-child,
+.wojo.very.relaxed.list:not(.horizontal):not(.divided) > .item:last-child  {
+  margin-bottom: 0;
+}
+.wojo.relaxed.list:not(.horizontal):not(.divided) > .item {
+  margin-bottom: 1rem;
+}
+.wojo.very.relaxed.list:not(.horizontal):not(.divided) > .item {
+  margin-bottom: 2rem;
+}
+.wojo.relaxed.divided.list:not(.horizontal) > .item:first-child,
+.wojo.very.relaxed.divided.list:not(.horizontal) > .item:first-child  {
+  padding-top: 0;
+}
+.wojo.relaxed.divided.list:not(.horizontal) > .item:last-child,
+.wojo.very.relaxed.divided.list:not(.horizontal) > .item:last-child  {
+  padding-bottom: 0;
+}
+.wojo.relaxed.divided.list:not(.horizontal) > .item {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.wojo.very.relaxed.divided.list:not(.horizontal):not(.divided) > .item {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.wojo.relaxed.list.horizontal > .item {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+.wojo.relaxed.list.horizontal > .item:first-child {
+  margin-left: 0;
+}
+.wojo.relaxed.list.horizontal > .item:last-child {
+  margin-right: 0;
+}
+.wojo.very.relaxed.list.horizontal > .item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.wojo.list > .item.active:not(.transparent) {
+  font-weight: 700;
+  color: var(--dark-color);
+}
+/* == Flex == */
+.wojo.fluid.list .item {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 0;
+}
+.wojo.fluid.list .item > .content {
+  flex: 1 1 0px;
+  min-width: 0;
+}
+.wojo.fluid.list .item > .content.auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+.wojo.horizontal.compact.list .item {
+  padding-left: .5rem;
+  margin-left: .5rem;
+}
+/* == Items == */
+.wojo.items {
+  display: flex;
+  flex-direction: column;
+}
+.wojo.items > .item {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  position: relative;
+}
+.wojo.items > .item > .columns {
+  flex: 1 1 0px;
+  min-width: 0;
+  padding: 0.750rem;
+  white-space: normal;
+}
+.wojo.items > .item > .columns.auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
+.wojo.items > .item > .columns > .header {
+  font-weight: 500;
+}
+.wojo.divided.items > .item {
+  border-top: 1px solid var(--grey-color-300);
+}
+.wojo.celled.items > .item {
+  border-top: 1px solid var(--grey-color-300);
+}
+.wojo.celled.items > .item:last-child {
+  border-bottom: 1px solid var(--grey-color-300);
+}
+.wojo.small.items > .item > .columns {
+  padding: 0.5rem;
+	font-size:.875rem;
+
+}
+/* == Grid Based == */
+.wojo.items > .item > .columns.one.wide {
+  flex: 0 0 10%;
+  max-width: 10%;
+}
+.wojo.items > .item > .columns.two.wide {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.wojo.items > .item > .columns.three.wide {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+.wojo.items > .item > .columns.four.wide {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+.wojo.items > .item > .columns.five.wide {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.wojo.items > .item > .columns.six.wide {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+.wojo.items > .item > .columns.seven.wide {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+.wojo.items > .item > .columns.eight.wide {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+.wojo.items > .item > .columns.nine.wide {
+  flex: 0 0 90%;
+  max-width: 90%;
+}
+.wojo.items > .item > .columns.ten.wide {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+/* == size == */
+.wojo.mini.list {
+  font-size: 0.750rem;
+}
+.wojo.tiny.list,
+.wojo.tiny.items {
+  font-size: 0.813rem;
+}
+.wojo.small.list,
+.wojo.small.items {
+  font-size: 0.938rem;
+}
+.wojo.list,
+.wojo.items {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+.wojo.items {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.wojo.items > .item > .columns.one.wide,
+.wojo.items > .item > .columns.two.wide,
+.wojo.items > .item > .columns.three.wide,
+.wojo.items > .item > .columns.four.wide,
+.wojo.items > .item > .columns.five.wide,
+.wojo.items > .item > .columns.six.wide,
+.wojo.items > .item > .columns.seven.wide,
+.wojo.items > .item > .columns.eight.wide,
+.wojo.items > .item > .columns.nine.wide,
+.wojo.items > .item > .columns.ten.wide,
+.wojo.items > .item > .columns {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
+.wojo.divided.items > .item {
+  border-top: 1px solid var(--grey-color-300);
+  border-left: 1px solid var(--grey-color-300);
+}
+.wojo.divided.items > .item:first-child {
+  border-left: 0;
+}
+.wojo.divided.horizontal.responsive.list,
+.wojo.celled.horizontal.responsive.list {
+  flex-direction: column;
+}
+.wojo.divided.horizontal.responsive.list > .item,
+.wojo.celled.horizontal.responsive.list > .item {
+  padding-left: 0;
+  margin-left: 0
+}
+.wojo.divided.horizontal.responsive.list > .item::before,
+.wojo.celled.horizontal.responsive.list > .item::before,
+.wojo.horizontal.celled.responsive.list > .item:last-child::after {
+  display: none;
+}
+}
+/* == Step List == */
+.wojo.step.list .item {
+  position: relative;
+  padding: 1rem 0 1rem 2.5rem;
+  margin: 0;
+}
+.wojo.step.list .item:first-child {
+  padding: 0 0 1rem 2.5rem;
+}
+.wojo.step.list .item:first-child::after {
+  height: 50%;
+  top: auto;
+}
+.wojo.step.list .item:last-child::after {
+  height: 50%;
+  bottom: auto;
+}
+.wojo.step.list .item::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -.3125rem;
+  width: .0625rem;
+  height: 100%;
+  border-right: 1px solid var(--grey-color-300);
+  margin: auto auto auto 0;
+  content: "";
+  visibility: visible;
+}
+.wojo.step.list .item::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: -.25rem;
+  width: 2rem;
+  height: .0625rem;
+  border-top: 1px solid var(--grey-color-300);
+  margin: auto auto auto 0;
+  content: "";
+}
+.wojo.step.list .item > .content,
+.wojo.indicating.list > .item .content {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border: 1px solid var(--grey-color-300);
+  border-radius: 0.25rem;
+  padding: 2em;
+}
+.wojo.step.list .item > .content > .description,
+.wojo.indicating.list .item > .content > .description  {
+  padding-left: 2rem;
+  margin: 0;
+  font-weight:normal;
+}
+.wojo.step.list .item > .content > * {
+  flex: 1 1 0px;
+  min-width: 0;
+}
+.wojo.step.list .item > .content .auto,
+.wojo.indicating.list .item > .content.auto {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+/* == Indicating List == */
+.wojo.indicating.list > .item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.wojo.indicating.list > .item::after {
+  position: absolute;
+  top: 32px;
+  left: 11px;
+  height: 100%;
+  border-left: 2px dashed var(--primary-color);
+  content: "";
+  visibility: visible
+}
+.wojo.indicating.list > .item .content:first-child {
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+.wojo.indicating.list > .item .content:first-child > span {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.625rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  color:#fff;
+  font-weight:500;
+}
+.wojo.indicating.list > .item .content:first-child > span > .icon {
+  line-height: 1.5rem;
+}
+.wojo.indicating.list > .item .content {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+.wojo.indicating.list .item:last-child::after {
+  border-left:0;
+}
+/* == Vertical Menus == */
+ul.vertical-menu li,
+ul.vertical-menu,
+ul.vertical-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
+ul.vertical-menu li {
+  border-top: 1px solid #e7eaf3;
+  display: block;
+  position: relative
+}
+ul.vertical-menu li a {
+  display: inline-block;
+  position: relative;
+  padding: .5rem 0;
+  color: var(--dark-color);
+  font-weight: 500;
+}
+ul.vertical-menu li a:hover,
+ul.vertical-menu li a.active {
+  color: var(--primary-color)
+}
+ul.vertical-menu li a > i.icon {
+  margin-right: .5em;
+}
+ul.vertical-menu li a span {
+  display: inline-block;
+  font-size: .750em;
+  padding: .5em;
+  margin-left: 1em;
+  line-height: .75;
+  border-radius: .188em;
+  font-weight: 600;
+}
+ul.vertical-menu .menu-submenu {
+  display: none;
+  top: 0
+}
+ul.vertical-menu .menu-submenu li {
+  border-bottom: 0;
+  border-top: 1px solid #e7eaf3;
+  box-shadow: none;
+  position: relative;
+}
+ul.vertical-menu .menu-submenu li a {
+  padding: 8px 25px
+}
+ul.vertical-menu .menu-submenu li ul li a {
+  padding: 8px 45px
+}
+ul.vertical-menu .menu-submenu li ul li ul li {
+}
+ul.vertical-menu .menu-submenu li ul li ul li a {
+  padding: 8px 65px
+}
+ul.vertical-menu .icon.chevron.down {
+  position: absolute;
+  right: 0;
+  display: block;
+  cursor: pointer;
+  padding: 13px 0;
+}
+.wojo.placeholder,
+.wojo.sortable .empty,
+.sort.active,
+.wojo.sortable .ghost:not(.icon),
+.ghost:not(.icon) {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color-inverted);
+  outline: 4px solid var(--primary-color);
+}
